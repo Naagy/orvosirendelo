@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foglalás Visszaigazolása - Orvosi Rendelő</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .confirmation-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .confirmation-container h2 {
+      font-size: 2em;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    .confirmation-details {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    .confirmation-details p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+    button {
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    a {
+      text-decoration: none;
+      color: #4CAF50;
+      display: block;
+      margin-top: 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Foglalás Visszaigazolása</h1>
+  </header>
+
+  <div class="confirmation-container">
+    <h2>Köszönjük a foglalást!</h2>
+
+    <div class="confirmation-details">
+      <p><strong>Időpont:</strong> <%= time %></p>
+      <p><strong>Név:</strong> <%= name %></p>
+      <p><strong>Telefonszám:</strong> <%= phone %></p>
+    </div>
+
+    <button onclick="window.location.href='/'">Vissza a főoldalra</button>
+
+    <a href="/">Vissza a foglalási időpontokhoz</a>
+  </div>
+
+</body>
+</html>
